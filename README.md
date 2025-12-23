@@ -12,21 +12,17 @@ The system is designed to handle:
 
 This project is ideal for learning and demonstrating database normalization, foreign key constraints, and relationship mapping in PostgreSQL
 
-# Database Tables
+## Database Tables
 - users: Supports Admin and Customer roles, 
 - vehicles: Managed primarily by Admin users, Helps track availability and usage history
 - bookings: Connects users and vehicles, Stores booking-related data such as time period and status
 
-## Tables
-- Users (Admin & Customer)
-- Vehicles
-- Bookings
 
 ## Relationships
-- One to Many: User → Bookings
-- Many to One: Bookings → Vehicle
+- One to Many: One user can create multiple bookings
+- Many to One: Multiple bookings can reference the same vehicle
 - One to One (Logical): Each booking connects exactly one user and one vehicle
 
 ## Files
-- queries.sql → Database schema
-- README.md → Project documentation
+- queries.sql --- Database Schema & Query Solutions
+- README.md --- Project documentation
