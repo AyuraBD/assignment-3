@@ -12,7 +12,7 @@ The system is designed to handle:
 
 This project is ideal for learning and demonstrating database normalization, foreign key constraints, and relationship mapping in PostgreSQL
 
-## Database Tables
+# Database Tables
 - users: Supports Admin and Customer roles, 
 - vehicles: Managed primarily by Admin users, Helps track availability and usage history
 - bookings: Connects users and vehicles, Stores booking-related data such as time period and status
@@ -24,5 +24,16 @@ This project is ideal for learning and demonstrating database normalization, for
 - One to One (Logical): Each booking connects exactly one user and one vehicle
 
 ## Files
-- queries.sql --- Database Schema & Query Solutions
 - README.md --- Project documentation
+- queries.sql --- Database Schema & Query Solutions
+  1. Query 1: INNER JOIN
+     - This query retrieves detailed booking information by combining data from the bookings, users, and vehicles tables.
+  2. Query 2: NOT EXISTS
+     This query identifies vehicles that have no booking records.
+     - Uses a LEFT JOIN combined with NOT EXISTS
+     - Filters out vehicles that appear in the bookings table
+     - Returns only vehicles that were never booked
+  3. Query 3 : SELECT, WHERE
+     -  This query filters vehicles based on availability status and vehicle type.
+  4. Query 4 : GROUP BY, HAVING, COUNT
+     - This query identifies high-demand vehicles based on booking frequency.
